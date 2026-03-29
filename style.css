@@ -1,101 +1,127 @@
-/* Globálne štýly */
+/* Farby */
+:root {
+  --bg: #F8F9FB;
+  --text: #111;
+  --card: rgba(255,255,255,0.6);
+  --accent: #4F46E5;
+}
+
+body.dark {
+  --bg: #0B0B0F;
+  --text: #EAEAEA;
+  --card: rgba(255,255,255,0.05);
+  --accent: #8B5CF6;
+}
+
 body {
-    font-family: Arial, sans-serif;
-    margin: 0;
-    padding: 0;
-    background-color: #f4f4f9;
-    color: #333;
+  margin:0;
+  font-family: 'Inter', sans-serif;
+  background: var(--bg);
+  color: var(--text);
+  transition: 0.3s;
 }
 
-/* Hlavný záhlavie */
-header {
-    text-align: center;
-    padding: 20px;
+/* NAV */
+nav {
+  display:flex;
+  justify-content:space-between;
+  padding:20px 40px;
 }
 
-/* Tlačidlo TikTok */
-.btn-tiktok {
-    background-color: #000000;
-    color: white;
-    padding: 10px 20px;
-    font-size: 16px;
-    border: none;
-    border-radius: 5px;
-    text-decoration: none;
-    display: inline-block;
-    margin: 10px 0;
+.toggle {
+  background:none;
+  border:1px solid var(--text);
+  padding:8px 12px;
+  border-radius:8px;
+  cursor:pointer;
 }
 
-.btn-tiktok:hover {
-    background-color: #ff0050; /* TikTok červená */
+/* HERO */
+.hero {
+  text-align:center;
+  padding:120px 20px;
 }
 
-/* Sekcia galérie */
-.gallery {
-    padding: 20px;
+.hero h1 {
+  font-size:64px;
 }
 
-/* Tlačidlo Subscribe v pravom hornom rohu stránky */
-.btn-subscribe {
-    background-color: #ff0050;  /* TikTok červená */
-    color: white;
-    padding: 12px 25px;
-    font-size: 18px;
-    border: none;
-    border-radius: 5px;
-    cursor: pointer;
-    position: fixed; /* Umiestni tlačidlo pevne na stránku */
-    top: 20px; /* Umiestni tlačidlo 20px od vrchu */
-    right: 20px; /* Umiestni tlačidlo 20px od pravej strany */
-    z-index: 1000; /* Uistíme sa, že bude na vrchu */
+.hero p {
+  opacity:0.7;
+  margin-bottom:30px;
 }
 
-.btn-subscribe:hover {
-    background-color: #ff3366; /* Tmavšia červená pri hover */
+.buttons button {
+  margin: 0 10px;
+  padding:12px 24px;
+  border:none;
+  border-radius:12px;
+  font-weight:600;
+  cursor:pointer;
+  transition:0.3s;
 }
 
-/* Nadpis galérie */
-.gallery-title {
-    text-align: center;
-    font-size: 48px;
-    margin-bottom: 40px;
-    color: #333;
+.buttons button:nth-child(1) {
+  background: var(--accent);
+  color:white;
 }
 
-/* Grid pre obrázky */
+.buttons button:nth-child(1):hover {
+  transform: scale(1.05);
+}
+
+button.tiktok {
+  background: #69C9D0;
+  color:white;
+}
+
+button.tiktok:hover {
+  background: #45AAB8;
+  transform: scale(1.05);
+}
+
+/* GRID - Grail Gallery efekty */
 .grid {
-    display: grid;
-    grid-template-columns: repeat(auto-fill, minmax(200px, 1fr)); /* Automatické prispôsobenie počtu stĺpcov */
-    gap: 20px;
-    padding: 20px;
-    justify-items: center; /* Zarovná karty na stred */
+  display:grid;
+  grid-template-columns: repeat(auto-fit, minmax(200px,1fr));
+  gap:24px;
+  padding:40px;
 }
 
-/* Karty obrázkov */
 .card {
-    background-color: #fff;
-    border-radius: 10px;
-    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
-    overflow: hidden;
-    width: 100%;
-    max-width: 220px;
-    text-align: center;
+  background:var(--card);
+  backdrop-filter: blur(20px);
+  border-radius:20px;
+  padding:16px;
+  transition:0.5s;
+  text-align:center;
 }
 
 .card img {
-    width: 100%;
-    height: auto;
-    transition: transform 0.3s ease;
+  width:100%;
+  border-radius:12px;
+  transition:0.5s;
+}
+
+.card:hover {
+  transform: scale(1.08) rotate(-2deg);
+  box-shadow:0 20px 30px rgba(0,0,0,0.25);
 }
 
 .card:hover img {
-    transform: scale(1.1);
+  transform: scale(1.1) rotate(-2deg);
 }
 
-.card p {
-    padding: 10px;
-    background-color: #fafafa;
-    margin: 0;
-    font-size: 18px;
-    color: #555;
+/* ABOUT */
+.about {
+  display:flex;
+  gap:40px;
+  padding:80px 40px;
+  flex-wrap:wrap;
+}
+
+/* CTA */
+.cta {
+  text-align:center;
+  padding:80px 20px;
 }
