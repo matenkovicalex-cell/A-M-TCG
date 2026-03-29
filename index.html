@@ -2,43 +2,48 @@
 <html lang="en">
 <head>
   <meta charset="UTF-8">
-  <!-- Tlačidlo na začiatku stránky -->
-  <a href="https://www.cardmarket.com/en/Pokemon" target="_blank" class="my-button">Track Your Card’s Value </a>
   <title>A&M TCG</title>
   <link rel="stylesheet" href="style.css">
   <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;600;700&display=swap" rel="stylesheet">
 </head>
-
 <body>
+
+<!-- Tlačidlo na začiatku -->
+<a href="https://www.cardmarket.com/en/Pokemon" target="_blank" class="my-button">Track Your Card’s Value</a>
+
+<!-- Padajúce karty -->
 <div class="card-bg" style="background-image:url('images/backround.jpeg');"></div>
 <div class="card-bg" style="background-image:url('images/backround1.jpeg');"></div>
 <div class="card-bg" style="background-image:url('images/backround2.jpeg');"></div>
+
+<!-- Navigácia s logom -->
 <nav>
-  <!-- Obrázkové logo -->
-  <a href="index.html">
-    <img src="images/AMLOGO.jpeg" alt="A&M TCG Logo" class="logo">
-  </a>
+  <a href="index.html"><img src="images/AMLOGO.jpeg" alt="A&M TCG Logo" class="logo"></a>
   <button class="toggle" onclick="toggleMode()">🌗</button>
 </nav>
 
+<!-- Hero sekcia -->
 <section class="hero">
-  <h1>Some Pokémons from our colection</h1>
+  <h1>Some Pokémons from our collection</h1>
   <p>Explore the digital Pokémon Gallery</p>
   <div class="buttons">
     <button onclick="scrollToGallery()">Explore</button>
     <button class="tiktok" onclick="goToTikTok()">Follow us on TikTok</button>
   </div>
 </section>
+
 <!-- Vyhľadávanie kariet -->
-<section class="search ">
+<section class="search">
   <input type="text" id="searchInput" placeholder="Search Pokémon cards..." />
 </section>
+
+<!-- Galéria všetkých 10 kariet -->
 <section class="grid">
   <div class="card"><img src="images/Mega Charizard x ex.jpeg" alt="Mega Charizard x ex"><p>Mega Charizard x ex 🔥</p></div>
   <div class="card"><img src="images/Crobat.jpeg" alt="Crobat"><p>Crobat 🧠</p></div>
   <div class="card"><img src="images/Mimikyu.jpeg" alt="Mimikyu"><p>Mimikyu 🧠</p></div>
   <div class="card"><img src="images/Mega Venosaur ex.jpeg" alt="Mega Venosaur ex"><p>Mega Venosaur ex 🌱</p></div>
-  <div class="card"><img src="images/Tinkaton ex.jpeg" alt="Tinkaton"><p>Tinkaton ex 🧠</p></div>
+  <div class="card"><img src="images/Tinkaton ex.jpeg" alt="Tinkaton ex"><p>Tinkaton ex 🧠</p></div>
   <div class="card"><img src="images/Tyranitar ex.jpeg" alt="Tyranitar ex"><p>Tyranitar ex 🐉</p></div>
   <div class="card"><img src="images/Mega Gengar ex.jpeg" alt="Mega Gengar Ex"><p>Mega Gengar ex 👻</p></div>
   <div class="card"><img src="images/Alakazam.jpeg" alt="Alakazam"><p>Alakazam ✨</p></div>
@@ -46,28 +51,30 @@
   <div class="card"><img src="images/Ice Rider Calyrex.jpeg" alt="Ice Rider Calyrex"><p>Ice Rider Calyrex ❄️</p></div>
 </section>
 
+<!-- About sekcia -->
 <section class="about">
   <div>
     <h2>About A&M TCG</h2>
     <p>At A&M TCG, we live and breathe the Pokémon Trading Card Game. We are collectors and consultants dedicated to the art of the hobby, focusing on modern cards with premium design and high-end potential.
-Our mission is to help enthusiasts and investors navigate the market with confidence. Whether we are building our own curated collection, sourcing rare gems, or advising others on their next big move, we prioritize quality, aesthetics, and professional insight.</p>
+Our mission is to help enthusiasts and investors navigate the market with confidence.</p>
   </div>
 </section>
 
+<!-- CTA / Subscribe -->
 <section class="cta">
   <h2>Join the collection</h2>
-   <form class="subscribe-box" action="mailto:contact.amtcg@gmail.com" method="post" enctype="text/plain">
+  <form class="subscribe-box" action="mailto:contact.amtcg@gmail.com" method="post" enctype="text/plain">
     <input type="email" name="email" placeholder="Enter your email" required>
     <button class="subscribe-btn" type="submit">Subscribe</button>
   </form>
 </section>
-  
-<!-- TU VLOŽÍME FOOTER -->
+
+<!-- Footer -->
 <footer class="footer">
   <hr>
   <p>Contact us: <a href="mailto:contact.amtcg@gmail.com">contact.amtcg@gmail.com</a></p>
 </footer>
-  
+
 <script src="script.js"></script>
 </body>
 </html>
