@@ -188,3 +188,7 @@ button.tiktok:hover {
   transform: scale(1.05);
   background: #ff2e55;
 }
+nav .logo {
+  height: 50px;  /* nastav výšku loga */
+  width: auto;   /* zachová proporcie */
+}
