@@ -156,3 +156,19 @@ button.tiktok:hover {
   background:#ff2e55;
   box-shadow:0 5px 20px rgba(255,77,109,0.5);
 }
+/* POHYBLIVÉ KARTY */
+.card-bg {
+  position: absolute;       /* karty sa môžu pohybovať po celej stránke */
+  width: 80px;              /* šírka karty */
+  height: 120px;            /* výška karty */
+  background-size: cover;   /* obrázok sa roztiahne na celý div */
+  top: -150px;              /* začnú nad obrazovkou */
+  left: calc(10% + 80vw * random()); /* náhodná horizontálna pozícia (upravíme na JS) */
+  animation: fall 10s linear infinite; /* animácia pohybu nadol */
+}
+
+/* animácia pádu */
+@keyframes fall {
+  0% { transform: translateY(0) rotate(0deg); }
+  100% { transform: translateY(100vh) rotate(360deg); }
+}
