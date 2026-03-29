@@ -7,19 +7,66 @@ body {
     color: #333;
 }
 
+/* Hlavný záhlavie */
+header {
+    text-align: center;
+    padding: 20px;
+}
+
+/* Tlačidlo TikTok */
+.btn-tiktok {
+    background-color: #000000;
+    color: white;
+    padding: 10px 20px;
+    font-size: 16px;
+    border: none;
+    border-radius: 5px;
+    text-decoration: none;
+    display: inline-block;
+    margin: 10px 0;
+}
+
+.btn-tiktok:hover {
+    background-color: #ff0050; /* TikTok červená */
+}
+
+/* Sekcia galérie */
+.gallery {
+    padding: 20px;
+}
+
+/* Tlačidlo Subscribe v pravom hornom rohu stránky */
+.btn-subscribe {
+    background-color: #ff0050;  /* TikTok červená */
+    color: white;
+    padding: 12px 25px;
+    font-size: 18px;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    position: fixed; /* Umiestni tlačidlo pevne na stránku */
+    top: 20px; /* Umiestni tlačidlo 20px od vrchu */
+    right: 20px; /* Umiestni tlačidlo 20px od pravej strany */
+    z-index: 1000; /* Uistíme sa, že bude na vrchu */
+}
+
+.btn-subscribe:hover {
+    background-color: #ff3366; /* Tmavšia červená pri hover */
+}
+
 /* Nadpis galérie */
 .gallery-title {
-    text-align: center;  /* Zarovná nadpis na stred */
-    font-size: 48px;      /* Veľký text */
-    margin-bottom: 40px;  /* Vytvorí medzeru medzi nadpisom a obrázkami */
-    color: #333;          /* Farba textu */
+    text-align: center;
+    font-size: 48px;
+    margin-bottom: 40px;
+    color: #333;
 }
 
 /* Grid pre obrázky */
 .grid {
     display: grid;
     grid-template-columns: repeat(auto-fill, minmax(200px, 1fr)); /* Automatické prispôsobenie počtu stĺpcov */
-    gap: 20px;    /* Medzera medzi kartami */
+    gap: 20px;
     padding: 20px;
     justify-items: center; /* Zarovná karty na stred */
 }
