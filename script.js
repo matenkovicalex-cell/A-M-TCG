@@ -1,44 +1,44 @@
-/* Tmavý / svetlý mód */
-function toggleMode() {
-  document.body.classList.toggle("dark");
-}
+// script.js
+document.addEventListener('DOMContentLoaded', () => {
 
-/* Scroll na galériu */
-function scrollToGallery() {
-  const gallery = document.querySelector('.grid');
-  gallery.scrollIntoView({ behavior: 'smooth' });
-}
+  /* ---------------- Tmavý / svetlý mód ---------------- */
+  window.toggleMode = () => {
+    document.body.classList.toggle("dark");
+  };
 
-/* TikTok presmerovanie */
-function goToTikTok() {
-  window.open("https://www.tiktok.com/@ampokemon", "_blank");
-}
-const cards = document.querySelectorAll('.card-bg');
+  /* ---------------- Scroll na galériu ---------------- */
+  window.scrollToGallery = () => {
+    const gallery = document.querySelector('.grid');
+    gallery.scrollIntoView({ behavior: 'smooth' });
+  };
 
-// Presné štartové pozície (px od ľavého okraja)
-const positions = [50, window.innerWidth/2, window.innerWidth - 130];
+  /* ---------------- TikTok presmerovanie ---------------- */
+  window.goToTikTok = () => {
+    window.open("https://www.tiktok.com/@ampokemon", "_blank");
+  };
 
-cards.forEach((card, index) => {
-  // horizontálna pozícia podľa indexu
-  card.style.left = positions[index] + 'px';
-  
-  // náhodná rýchlosť 5–15 sekúnd
-  const randomDuration = 5 + Math.random() * 10;
-  card.style.animationDuration = randomDuration + 's';
-});
-// Filtrovanie kariet podľa názvu
-const searchInput = document.getElementById('searchInput');
-const cards = document.querySelectorAll('.grid .card');
+  /* ---------------- Padajúce karty ---------------- */
+  const bgCards = document.querySelectorAll('.card-bg'); // všetky pohyblivé obrázky
+  const positions = [50, window.innerWidth / 2, window.innerWidth - 130]; // štartové horizontálne pozície
 
-searchInput.addEventListener('input', function() {
-  const filter = searchInput.value.toLowerCase();
-
-  cards.forEach(card => {
-    const cardName = card.querySelector('p').textContent.toLowerCase();
-    if (cardName.includes(filter)) {
-      card.style.display = 'block';
-    } else {
-      card.style.display = 'none';
-    }
+  bgCards.forEach((card, index) => {
+    card.style.left = positions[index] + 'px';
+    const randomDuration = 5 + Math.random() * 10; // 5-15s
+    card.style.animationDuration = randomDuration + 's';
   });
+
+  /* ---------------- Filtrovanie kariet ---------------- */
+  const galleryCards = document.querySelectorAll('.grid .card');
+  const searchInput = document.getElementById('searchInput');
+
+  if (searchInput) {
+    searchInput.addEventListener('input', function() {
+      const filter = searchInput.value.toLowerCase();
+      galleryCards.forEach(card => {
+        const cardName = card.querySelector('p').textContent.toLowerCase();
+        card.style.display = cardName.includes(filter) ? 'block' : 'none';
+      });
+    });
+  }
+
 });
