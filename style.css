@@ -217,3 +217,23 @@ nav .logo {
 .footer a:hover {
   text-decoration: underline;
 }
+/* Vyhľadávanie kariet */
+.search {
+  text-align: center;
+  margin: 30px 0;
+}
+
+#searchInput {
+  width: 250px;
+  padding: 10px 15px;
+  font-size: 16px;
+  border-radius: 8px;
+  border: 1px solid var(--accent);
+  outline: none;
+  transition: 0.3s;
+}
+
+#searchInput:focus {
+  border-color: #ff4d6d;
+  box-shadow: 0 0 5px #ff4d6d;
+}
