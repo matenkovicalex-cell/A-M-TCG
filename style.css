@@ -1,3 +1,4 @@
+/* Farby */
 :root {
   --bg: #F8F9FB;
   --text: #111;
@@ -47,36 +48,68 @@ nav {
 
 .hero p {
   opacity:0.7;
+  margin-bottom:30px;
 }
 
-.hero button {
-  margin-top:20px;
+.buttons button {
+  margin: 0 10px;
   padding:12px 24px;
   border:none;
   border-radius:12px;
-  background:var(--accent);
-  color:white;
+  font-weight:600;
   cursor:pointer;
+  transition:0.3s;
 }
 
-/* GRID */
+.buttons button:nth-child(1) {
+  background: var(--accent);
+  color:white;
+}
+
+.buttons button:nth-child(1):hover {
+  transform: scale(1.05);
+}
+
+button.tiktok {
+  background: #69C9D0;
+  color:white;
+}
+
+button.tiktok:hover {
+  background: #45AAB8;
+  transform: scale(1.05);
+}
+
+/* GRID - Grail Gallery efekty */
 .grid {
   display:grid;
-  grid-template-columns: repeat(auto-fit, minmax(250px,1fr));
+  grid-template-columns: repeat(auto-fit, minmax(200px,1fr));
   gap:24px;
   padding:40px;
 }
 
 .card {
   background:var(--card);
-  backdrop-filter: blur(10px);
-  border-radius:16px;
+  backdrop-filter: blur(20px);
+  border-radius:20px;
   padding:16px;
-  transition:0.3s;
+  transition:0.5s;
+  text-align:center;
+}
+
+.card img {
+  width:100%;
+  border-radius:12px;
+  transition:0.5s;
 }
 
 .card:hover {
-  transform:scale(1.05);
+  transform: scale(1.08) rotate(-2deg);
+  box-shadow:0 20px 30px rgba(0,0,0,0.25);
+}
+
+.card:hover img {
+  transform: scale(1.1) rotate(-2deg);
 }
 
 /* ABOUT */
