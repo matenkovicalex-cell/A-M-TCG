@@ -1,54 +1,34 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="sk">
 <head>
-  <meta charset="UTF-8">
-  <title>A&M TCG</title>
-  <link rel="stylesheet" href="style.css">
-  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;600;700&display=swap" rel="stylesheet">
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>A&M TCG - Our Gallery</title>
+    <link rel="stylesheet" href="style.css">
 </head>
-
 <body>
+    <header>
+        <h1>Welcome to A&M TCG!</h1>
+    </header>
+    
+    <!-- Nadpis galérie mimo gridu -->
+    <section class="gallery">
+        <h2 class="gallery-title">Our Gallery</h2>
+        <div class="grid">
+            <!-- Karty obrázkov -->
+            <div class="card"><img src="images/Mega Charizard x ex.jpeg" alt="Mega Charizard x ex"><p>Mega Charizard x ex 🔥</p></div>
+            <div class="card"><img src="images/Crobat.jpeg" alt="Crobat"><p>Crobat 🧠</p></div>
+            <div class="card"><img src="images/Mimikyu.jpeg" alt="Mimikyu"><p>Mimikyu 🧠</p></div>
+            <div class="card"><img src="images/Mega Venosaur ex.jpeg" alt="Mega Venosaur ex"><p>Mega Venosaur ex 🌱</p></div>
+            <div class="card"><img src="images/Tinkaton ex.jpeg" alt="Tinkaton"><p>Tinkaton ex 🧠</p></div>
+            <div class="card"><img src="images/Tyranitar ex.jpeg" alt="Tyranitar ex"><p>Tyranitar ex 🐉</p></div>
+            <div class="card"><img src="images/Mega Gengar ex.jpeg" alt="Mega Gengar Ex"><p>Mega Gengar ex 👻</p></div>
+            <div class="card"><img src="images/Alakazam.jpeg" alt="Alakazam"><p>Alakazam ✨</p></div>
+            <div class="card"><img src="images/Dragonite.jpeg" alt="Dragonite"><p>Dragonite 🐉</p></div>
+            <div class="card"><img src="images/Ice Rider Calyrex.jpeg" alt="Ice Rider Calyrex"><p>Ice Rider Calyrex ❄️</p></div>
+        </div>
+    </section>
 
-<nav>
-  <h2>A&M TCG</h2>
-  <button class="toggle" onclick="toggleMode()">🌗</button>
-</nav>
-
-<section class="hero">
-  <h1>Rare Pokémon Collection</h1>
-  <p>Explore the digital Grail Gallery of iconic Pokémon</p>
-  <div class="buttons">
-    <button onclick="scrollToGallery()">Explore</button>
-    <button class="tiktok" onclick="goToTikTok()">Sleduj nás na TikToku</button>
-  </div>
-</section>
-
-<section class="grid">
-  <h2 class="gallery-title">Our Gallery</h2>
-  <div class="card"><img src="images/Mega Charizard x ex.jpeg" alt="Mega Charizard x ex"><p>Mega Charizard x ex 🔥</p></div>
-  <div class="card"><img src="images/Crobat.jpeg" alt="Crobat"><p>Crobat 🧠</p></div>
-  <div class="card"><img src="images/Mimikyu.jpeg" alt="Mimikyu"><p>Mimikyu 🧠</p></div>
-  <div class="card"><img src="images/Mega Venosaur ex.jpeg" alt="Mega Venosaur ex"><p>Mega Venosaur ex 🌱</p></div>
-  <div class="card"><img src="images/Tinkaton ex.jpeg" alt="Tinkaton"><p>Tinkaton ex 🧠</p></div>
-  <div class="card"><img src="images/Tyranitar ex.jpeg" alt="Tyranitar ex"><p>Tyranitar ex 🐉</p></div>
-  <div class="card"><img src="images/Mega Gengar ex.jpeg" alt="Mega Gengar Ex"><p>Mega Gengar ex 👻</p></div>
-  <div class="card"><img src="images/Alakazam.jpeg" alt="Alakazam"><p>Alakazam ✨</p></div>
-  <div class="card"><img src="images/Dragonite.jpeg" alt="Dragonite"><p>Dragonite 🐉</p></div>
-  <div class="card"><img src="images/Ice Rider Calyrex.jpeg" alt="Ice Rider Calyrex"><p>Ice Rider Calyrex ❄️</p></div>
-</section>
-
-<section class="about">
-  <div>
-    <h2>About A&M TCG</h2>
-    <p>We create modern Pokémon galleries with premium design for collectors and enthusiasts.</p>
-  </div>
-</section>
-
-<section class="cta">
-  <h2>Join the collection</h2>
-  <button>Subscribe</button>
-</section>
-
-<script src="script.js"></script>
+    <script src="script.js"></script>
 </body>
 </html>
