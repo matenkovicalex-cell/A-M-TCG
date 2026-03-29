@@ -1,127 +1,181 @@
-/* Farby */
-:root {
-  --bg: #F8F9FB;
-  --text: #111;
-  --card: rgba(255,255,255,0.6);
-  --accent: #4F46E5;
-}
-
-body.dark {
-  --bg: #0B0B0F;
-  --text: #EAEAEA;
-  --card: rgba(255,255,255,0.05);
-  --accent: #8B5CF6;
+/* Globálne štýly */
+* {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
 }
 
 body {
-  margin:0;
-  font-family: 'Inter', sans-serif;
-  background: var(--bg);
-  color: var(--text);
-  transition: 0.3s;
+    font-family: 'Inter', sans-serif;
+    background-color: #f4f4f9;
+    color: #222;
+    line-height: 1.6;
 }
 
-/* NAV */
+/* Navigácia */
 nav {
-  display:flex;
-  justify-content:space-between;
-  padding:20px 40px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 20px 40px;
+    background-color: #ffffff;
+    box-shadow: 0 2px 8px rgba(0,0,0,0.1);
+    position: sticky;
+    top: 0;
+    z-index: 100;
 }
 
-.toggle {
-  background:none;
-  border:1px solid var(--text);
-  padding:8px 12px;
-  border-radius:8px;
-  cursor:pointer;
+nav h2 {
+    font-weight: 700; /* hrubšie písmo */
+    font-size: 28px;
+    color: #ff0050; /* akcent farba */
 }
 
-/* HERO */
+nav .toggle {
+    font-size: 24px;
+    background: none;
+    border: none;
+    cursor: pointer;
+}
+
+/* Hero sekcia */
 .hero {
-  text-align:center;
-  padding:120px 20px;
+    text-align: center;
+    padding: 120px 20px 80px;
+    background: linear-gradient(135deg, #ffccd9, #ffe6e6);
 }
 
 .hero h1 {
-  font-size:64px;
+    font-size: 48px;
+    font-weight: 700; /* hrubšie nadpisy */
+    margin-bottom: 20px;
+    color: #ff0050;
 }
 
 .hero p {
-  opacity:0.7;
-  margin-bottom:30px;
+    font-size: 20px;
+    font-weight: 400;
+    margin-bottom: 40px;
 }
 
-.buttons button {
-  margin: 0 10px;
-  padding:12px 24px;
-  border:none;
-  border-radius:12px;
-  font-weight:600;
-  cursor:pointer;
-  transition:0.3s;
+.hero .buttons button {
+    background-color: #ff0050;
+    color: white;
+    border: none;
+    padding: 15px 30px;
+    font-size: 16px;
+    border-radius: 8px;
+    cursor: pointer;
+    margin: 0 10px;
+    transition: all 0.3s ease;
+    font-weight: 600;
 }
 
-.buttons button:nth-child(1) {
-  background: var(--accent);
-  color:white;
+.hero .buttons button:hover {
+    background-color: #ff3366;
 }
 
-.buttons button:nth-child(1):hover {
-  transform: scale(1.05);
+.hero .buttons .tiktok {
+    background-color: #000000;
 }
 
-button.tiktok {
-  background: #69C9D0;
-  color:white;
+.hero .buttons .tiktok:hover {
+    background-color: #333333;
 }
 
-button.tiktok:hover {
-  background: #45AAB8;
-  transform: scale(1.05);
-}
-
-/* GRID - Grail Gallery efekty */
+/* Grid galérie */
 .grid {
-  display:grid;
-  grid-template-columns: repeat(auto-fit, minmax(200px,1fr));
-  gap:24px;
-  padding:40px;
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(200px, 1fr));
+    gap: 20px;
+    padding: 40px 20px;
+    justify-items: center;
 }
 
 .card {
-  background:var(--card);
-  backdrop-filter: blur(20px);
-  border-radius:20px;
-  padding:16px;
-  transition:0.5s;
-  text-align:center;
+    background-color: #fff;
+    border-radius: 12px;
+    overflow: hidden;
+    box-shadow: 0 6px 15px rgba(0,0,0,0.1);
+    width: 100%;
+    max-width: 220px;
+    text-align: center;
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
 }
 
 .card img {
-  width:100%;
-  border-radius:12px;
-  transition:0.5s;
-}
-
-.card:hover {
-  transform: scale(1.08) rotate(-2deg);
-  box-shadow:0 20px 30px rgba(0,0,0,0.25);
+    width: 100%;
+    height: auto;
+    transition: transform 0.3s ease;
 }
 
 .card:hover img {
-  transform: scale(1.1) rotate(-2deg);
+    transform: scale(1.05);
 }
 
-/* ABOUT */
+.card:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 10px 25px rgba(0,0,0,0.15);
+}
+
+.card p {
+    padding: 10px;
+    background-color: #fafafa;
+    font-weight: 600; /* trocha hrubšie */
+    font-size: 16px;
+    color: #555;
+}
+
+/* About sekcia */
 .about {
-  display:flex;
-  gap:40px;
-  padding:80px 40px;
-  flex-wrap:wrap;
+    background-color: #ffffff;
+    max-width: 900px;
+    margin: 50px auto;
+    padding: 60px 30px;
+    border-radius: 12px;
+    box-shadow: 0 6px 20px rgba(0,0,0,0.1);
 }
 
-/* CTA */
+.about h2 {
+    font-size: 36px;
+    font-weight: 700;
+    text-align: center;
+    margin-bottom: 30px;
+    color: #ff0050;
+}
+
+.about p {
+    font-size: 18px;
+    font-weight: 400;
+    margin-bottom: 20px;
+}
+
+/* CTA sekcia */
 .cta {
-  text-align:center;
-  padding:80px 20px;
+    text-align: center;
+    padding: 60px 20px;
+    background-color: #ffccd9;
+}
+
+.cta h2 {
+    font-size: 36px;
+    font-weight: 700;
+    margin-bottom: 20px;
+    color: #ff0050;
+}
+
+.cta button {
+    background-color: #ff0050;
+    color: white;
+    border: none;
+    padding: 15px 35px;
+    font-size: 18px;
+    border-radius: 10px;
+    font-weight: 600;
+    cursor: pointer;
+    transition: all 0.3s ease;
+}
+
+.cta button:hover {
+    background-color: #ff3366;
 }
