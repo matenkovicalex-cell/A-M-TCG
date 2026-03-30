@@ -45,6 +45,13 @@ nav .logo {
 .hero { text-align:center; padding:120px 20px; }
 .hero h1 { font-size:64px; }
 .hero p { opacity:0.7; margin-bottom:30px; }
+.hero .beta-text {
+  font-size:16px;
+  color: var(--text);
+  opacity:0.7;
+  margin-bottom:10px;
+  font-weight:500;
+}
 .buttons button {
   margin:0 10px; padding:12px 24px; border:none; border-radius:12px;
   font-weight:600; cursor:pointer; transition:0.3s;
@@ -93,6 +100,7 @@ button.tiktok:hover { background:#45AAB8; transform:scale(1.05); }
 .footer hr { border:1px solid var(--accent); margin-bottom:10px; width:80%; margin:auto; }
 .footer a { color:var(--accent); text-decoration:none; font-weight:600; }
 .footer a:hover { text-decoration:underline; }
+.footer p { margin: 5px 0; font-size: 14px; color: var(--text); opacity: 0.8; }
 
 /* Horná lišta */
 .navbar {
@@ -121,7 +129,6 @@ button.tiktok:hover { background:#45AAB8; transform:scale(1.05); }
 
 .nav-links a {
   text-decoration: none;
-  color: white;
   font-weight: 600;
   padding: 10px 18px;
   border-radius: 10px;
@@ -130,29 +137,27 @@ button.tiktok:hover { background:#45AAB8; transform:scale(1.05); }
   text-align: center;
 }
 
-/* Individuálne farby tlačidiel */
-.nav-links a:nth-child(1) { background: linear-gradient(45deg,#4f46e5,#8b5cf6); } /* Gallery */
-.nav-links a:nth-child(2) { background: linear-gradient(45deg,#ff4d6d,#ff2e55); } /* Cardmarket */
-.nav-links a:nth-child(3) { background: linear-gradient(45deg,#69c9d0,#45aab8); } /* TikTok */
-.nav-links a:nth-child(4) { background: linear-gradient(45deg,#22c55e,#16a34a); } /* Download App */
+/* Farby tlačidiel svetlý režim */
+body:not(.dark) .nav-links a:nth-child(1) { background: linear-gradient(45deg,#4f46e5,#8b5cf6); color: white; } /* Gallery */
+body:not(.dark) .nav-links a:nth-child(2) { background: linear-gradient(45deg,#ff4d6d,#ff2e55); color: white; } /* Cardmarket */
+body:not(.dark) .nav-links a:nth-child(3) { background: linear-gradient(45deg,#69c9d0,#45aab8); color: white; } /* TikTok */
+body:not(.dark) .nav-links a:nth-child(4) { background: linear-gradient(45deg,#22c55e,#16a34a); color: white; } /* Download App */
+body:not(.dark) .nav-links a.questions { background: linear-gradient(45deg,#f59e0b,#d97706); color: white; } /* Questions */
+
+/* Farby tlačidiel tmavý režim */
+body.dark .nav-links a:nth-child(1) { background: linear-gradient(45deg,#818cf8,#a5b4fc); color: #111; } /* Gallery */
+body.dark .nav-links a:nth-child(2) { background: linear-gradient(45deg,#f87171,#f43f5e); color: #111; } /* Cardmarket */
+body.dark .nav-links a:nth-child(3) { background: linear-gradient(45deg,#67e8f9,#22d3ee); color: #111; } /* TikTok */
+body.dark .nav-links a:nth-child(4) { background: linear-gradient(45deg,#4ade80,#16a34a); color: #111; } /* Download App */
+body.dark .nav-links a.questions { background: linear-gradient(45deg,#facc15,#d97706); color: #111; } /* Questions */
 
 /* Hover efekt pre všetky tlačidlá */
 .nav-links a:hover {
   transform: scale(1.05);
   box-shadow: 0 6px 15px rgba(0,0,0,0.3);
 }
-.hero .beta-text {
-  font-size: 16px;       /* menší text */
-  color: var(--text);    /* môžeš použiť aj svetlejšiu farbu, napr. rgba(17,17,17,0.6) */
-  opacity: 0.7;          /* jemnejší vzhľad */
-  margin-bottom: 10px;   /* medzera pod textom */
-  font-weight: 500; 
-.footer p {
-  margin: 5px 0;
-  font-size: 14px;
-  color: var(--text);
-  opacity: 0.8;
-}
+
+/* Kontaktná sekcia */
 .contact {
   text-align: center;
   padding: 80px 20px;
@@ -181,17 +186,4 @@ button.tiktok:hover { background:#45AAB8; transform:scale(1.05); }
 .contact-box textarea:focus {
   border-color: #ff4d6d;
   box-shadow: 0 0 5px #ff4d6d;
-}
-.nav-links a.questions {
-  background: linear-gradient(45deg,#f59e0b,#d97706); /* oranžový gradient */
-  color: white !important;
-  padding: 10px 18px;
-  border-radius: 10px;
-  font-weight: 600;
-  transition: all 0.3s ease;
-}
-
-.nav-links a.questions:hover {
-  transform: scale(1.05);
-  box-shadow: 0 6px 15px rgba(0,0,0,0.3);
 }
