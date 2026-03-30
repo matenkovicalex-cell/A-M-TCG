@@ -184,7 +184,7 @@ button.tiktok:hover { background:#45AAB8; transform:scale(1.05); }
 }
 .nav-links a.questions {
   background: linear-gradient(45deg,#f59e0b,#d97706); /* oranžový gradient */
-  color: white !important;
+  color: Yellow !important;
   padding: 10px 18px;
   border-radius: 10px;
   font-weight: 600;
